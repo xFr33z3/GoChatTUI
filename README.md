@@ -129,7 +129,3 @@ go run client.go
 **Port already in use**: If port 8000 is busy, modify the port in both server and client code.
 
 **Display issues**: Ensure your terminal supports ANSI colors and has sufficient size.
-
-### Debug Mode
-
-To enable debug logging, modify the log level in the source code or check terminal output for error messages.
