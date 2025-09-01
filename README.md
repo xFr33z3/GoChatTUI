@@ -36,7 +36,7 @@ GoChatTUI/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/xFr33z3/GoChatTUI.git
 cd GoChatTUI
 ```
 
