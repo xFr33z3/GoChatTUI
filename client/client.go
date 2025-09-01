@@ -39,7 +39,6 @@ func main() {
 		AddItem(messages, 0, 1, false).
 		AddItem(input, 1, 0, true)
 
-	// Connessione al server
 	conn, err := net.Dial("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)
@@ -63,7 +62,7 @@ func main() {
 		text := input.GetText()
 		if text != "" {
 			conn.Write([]byte(text + "\n"))
-			input.SetText("") // cancella input
+			input.SetText("")
 		}
 	})
 
