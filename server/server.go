@@ -20,6 +20,8 @@ var (
 	clients   = make(map[net.Conn]bool)
 	nicknames = make(map[net.Conn]string)
 	broadcast = make(chan BMessage)
+
+	ServerIP string = "0.0.0.0:8000"
 )
 
 var mu sync.Mutex
@@ -108,7 +110,7 @@ func broadcaster() {
 }
 
 func main() {
-	ln, err := net.Listen("tcp", ":8000")
+	ln, err := net.Listen("tcp", ServerIP)
 	if err != nil {
 		log.Fatal(err)
 	}

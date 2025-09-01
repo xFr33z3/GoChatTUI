@@ -9,6 +9,11 @@ import (
 	"github.com/rivo/tview"
 )
 
+// Config section
+var (
+	ServerIP string = "localhost:8000"
+)
+
 func main() {
 	app := tview.NewApplication()
 
@@ -39,7 +44,7 @@ func main() {
 		AddItem(messages, 0, 1, false).
 		AddItem(input, 1, 0, true)
 
-	conn, err := net.Dial("tcp", "localhost:8000")
+	conn, err := net.Dial("tcp", ServerIP)
 	if err != nil {
 		log.Fatal(err)
 	}
