@@ -1,0 +1,4 @@
+Welcome to xFr33z3 GoChatTUI server.
+
+Commands:
+/nick username - set up your nickname
